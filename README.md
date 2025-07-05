@@ -42,7 +42,7 @@ Using the todo server, the agent can:
 ```
 
 ### Example Workflow
-```json
+```
 // Agent creates ordered tasks
 create_todo("Set up project structure")
 create_todo("Install dependencies") 
