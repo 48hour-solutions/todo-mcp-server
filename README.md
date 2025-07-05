@@ -91,6 +91,12 @@ The server exposes several resources for easy data access:
 - `todo://todos/completed` - Only completed tasks
 - `todo://todos/next` - The next task to work on
 
+## Showcase
+![image](https://github.com/user-attachments/assets/465118f0-1c3d-4b5a-9db4-a643f7c2eb7b)
+![image](https://github.com/user-attachments/assets/4e0128cd-7392-4ceb-ae04-41780fa30cbc)
+![image](https://github.com/user-attachments/assets/74ee7e63-c550-41b9-b91d-4d50ea3cb472)
+
+
 ## Perfect for Complex Task Breakdown
 
 This server excels at helping AI agents break down complex projects into manageable steps:
