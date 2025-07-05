@@ -2,63 +2,6 @@
 
 A TypeScript MCP (Model Context Protocol) server that provides AI agents with powerful task management capabilities. This server enables Claude and other AI assistants to create, organize, and manage ordered task lists - perfect for breaking down complex projects into manageable, prioritized steps.
 
-## Features
-
-### Core Task Management
-- **Create Todo Items** - Add new tasks with titles and optional descriptions
-- **Get Next Task** - Retrieve the next priority task to work on
-- **Update Tasks** - Modify task titles, descriptions, or status
-- **Complete Tasks** - Mark tasks as completed
-- **Delete Tasks** - Remove tasks from the list
-- **Task Statistics** - Get overview of pending and completed tasks
-
-### Advanced Organization
-- **Ordered Task Lists** - Tasks are automatically ordered by creation priority
-- **Status Filtering** - Filter tasks by pending or completed status
-- **Bulk Operations** - Clear all tasks when needed
-- **Persistent Storage** - Tasks persist across server restarts
-
-### MCP Resources
-The server exposes several resources for easy data access:
-- `todo://todos` - All todo items
-- `todo://todos/pending` - Only pending tasks
-- `todo://todos/completed` - Only completed tasks
-- `todo://todos/next` - The next task to work on
-
-## Perfect for Complex Task Breakdown
-
-This server excels at helping AI agents break down complex projects into manageable steps:
-
-### Example: "Build a Web Application"
-```
-Agent: "I need to build a web application with user authentication"
-
-Using the todo server, the agent can:
-1. Create main tasks: "Set up project structure", "Implement authentication", "Build UI"
-2. Break down each task into subtasks
-3. Work through them systematically using get_next_todo
-4. Track progress with completion status
-5. Get statistics on overall progress
-```
-
-### Example Workflow
-```
-// Agent creates ordered tasks
-create_todo("Set up project structure")
-create_todo("Install dependencies") 
-create_todo("Create user authentication system")
-create_todo("Build login/register components")
-create_todo("Implement protected routes")
-create_todo("Add error handling")
-create_todo("Write tests")
-create_todo("Deploy application")
-
-// Agent works through tasks systematically
-get_next_todo() // Returns "Set up project structure"
-complete_todo("task-id-1")
-get_next_todo() // Returns "Install dependencies"
-```
-
 ## Installation
 
 ### Prerequisites
@@ -123,6 +66,64 @@ Edit `~/.config/Claude/claude_desktop_config.json`:
 ```
 
 **Note:** Replace `path/to/todo-mcp-server` with the actual path to your installed server.
+
+
+## Features
+
+### Core Task Management
+- **Create Todo Items** - Add new tasks with titles and optional descriptions
+- **Get Next Task** - Retrieve the next priority task to work on
+- **Update Tasks** - Modify task titles, descriptions, or status
+- **Complete Tasks** - Mark tasks as completed
+- **Delete Tasks** - Remove tasks from the list
+- **Task Statistics** - Get overview of pending and completed tasks
+
+### Advanced Organization
+- **Ordered Task Lists** - Tasks are automatically ordered by creation priority
+- **Status Filtering** - Filter tasks by pending or completed status
+- **Bulk Operations** - Clear all tasks when needed
+- **Persistent Storage** - Tasks persist across server restarts
+
+### MCP Resources
+The server exposes several resources for easy data access:
+- `todo://todos` - All todo items
+- `todo://todos/pending` - Only pending tasks
+- `todo://todos/completed` - Only completed tasks
+- `todo://todos/next` - The next task to work on
+
+## Perfect for Complex Task Breakdown
+
+This server excels at helping AI agents break down complex projects into manageable steps:
+
+### Example: "Build a Web Application"
+```
+Agent: "I need to build a web application with user authentication"
+
+Using the todo server, the agent can:
+1. Create main tasks: "Set up project structure", "Implement authentication", "Build UI"
+2. Break down each task into subtasks
+3. Work through them systematically using get_next_todo
+4. Track progress with completion status
+5. Get statistics on overall progress
+```
+
+### Example Workflow
+```
+// Agent creates ordered tasks
+create_todo("Set up project structure")
+create_todo("Install dependencies") 
+create_todo("Create user authentication system")
+create_todo("Build login/register components")
+create_todo("Implement protected routes")
+create_todo("Add error handling")
+create_todo("Write tests")
+create_todo("Deploy application")
+
+// Agent works through tasks systematically
+get_next_todo() // Returns "Set up project structure"
+complete_todo("task-id-1")
+get_next_todo() // Returns "Install dependencies"
+```
 
 ## Usage Examples
 
